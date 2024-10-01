@@ -1,8 +1,9 @@
+import AboutPage from "@/pages/AboutPage.vue";
+import HomePage from "@/pages/HomePage.vue";
+import LoginPage from "@/pages/LoginPage.vue";
+import NotFoundPage from "@/pages/NotFoundPage.vue";
+import SignUpPage from "@/pages/SignUpPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
-import NotFound from "@/views/NotFound.vue";
-import HomeView from "@/views/HomeView.vue";
-import LoginView from "@/views/LoginView.vue";
-import SignUpView from "@/views/SignUpView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +11,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView,
+      component: HomePage,
     },
     {
       path: "/about",
@@ -18,28 +19,22 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      component: AboutPage
     },
     {
       path: "/sign-up",
-      component: SignUpView,
+      component: SignUpPage
     },
     {
       path: "/log-in",
-      component: LoginView,
+      component: LoginPage,
     },
     {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
-      component: NotFound,
+      component: NotFoundPage,
     },
   ],
-});
-
-// document.title = to.name;
-router.beforeEach((to, from, next) => {
-  document.title = "Phuong | " + (to.name as string);
-  next();
 });
 
 export default router;

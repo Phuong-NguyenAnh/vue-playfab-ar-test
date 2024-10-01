@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { useHead } from '@unhead/vue';
+
+useHead({ title: "404 Not Found" });
+</script>
 <template>
     <div class="container has-text-centered">
         <h4>

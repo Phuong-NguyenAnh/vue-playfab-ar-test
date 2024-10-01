@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { useHead } from '@unhead/vue';
 import { ref } from 'vue';
+
+useHead({
+    title: 'Sign Up'
+});
 
 const formRef = ref<{ email: string, password: string, rePassword: string; }>({ email: "", password: "", rePassword: '' });
 
