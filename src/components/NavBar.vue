@@ -57,3 +57,10 @@
         </div>
     </nav>
 </template>
+
+<style scoped>
+.navbar {
+    position: sticky;
+    top: 0px;
+}
+</style>
