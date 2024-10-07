@@ -45,9 +45,6 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <RouterLink to="/sign-up" class="button is-primary">
-                            <strong>Sign up</strong>
-                        </RouterLink>
                         <RouterLink to="/log-in" class="button is-light">
                             Log in
                         </RouterLink>
