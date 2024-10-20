@@ -1,16 +1,15 @@
 import { createStore } from "vuex";
+import type { LoginState } from "./Login/state";
+import { LoginModule } from "./Login";
 
-const store = createStore({
-    state() {
-        return {
-            count: 0
-        }
-    },
-    mutations: {
-        increment(state) {
-            state.count++
-        }
+export interface IState {
+    Login: LoginState
+}
+
+const store = createStore<IState>({
+    modules: {
+        Login: LoginModule
     }
 })
 
-export default store
+export default store;
