@@ -18,5 +18,5 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 8080
   },
-  base: '/vue-playfab-ar-test'
+  base: '/vue-playfab-ar-test/'
 })
