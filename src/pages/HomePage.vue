@@ -17,6 +17,6 @@ function increment() {
 
 <template>
   <div>home
-    <button class="button is-info" @click="increment">count</button>
+    <button class="button is-info" @click="increment"> home button</button>
   </div>
 </template>
